@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "H5ApiModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LYouRequestManager : NSObject
 
-typedef void (^LYReturnValueBlock)(NSURLSessionDataTask *task, NSDictionary *responseDict);
+typedef void (^LYReturnValueBlock)(NSURLSessionDataTask *task, H5ApiModel *model);
 typedef void (^LYErroeBlock)(NSURLSessionDataTask *task, NSError* error);
 typedef void (^LYFailureBlock)(void);
 

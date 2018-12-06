@@ -17,5 +17,6 @@
 #import "LYouLoadView.h"
 #import "MBProgressHUD.h"
 #import "JoDes.h"
+#import "MJExtension.h"
 
 #endif /* PrefixHeader_pch */

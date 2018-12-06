@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <WebKit/WebKit.h>
 #import "LY_LocalServerManager.h"
+#import "H5ApiModel.h"
 
 @interface ViewController ()<WKNavigationDelegate, WKUIDelegate>{
     WKWebView *_wkWebView;
@@ -22,8 +23,9 @@
     [super viewDidLoad];
     /** 初始化 */
     [LYouLoadView show];
-    [[LYouRequestManager shared]initH5Api:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nonnull responseDict) {
-        NSLog(@"responseDict=========%@",responseDict);
+    [[LYouRequestManager shared]initH5Api:^(NSURLSessionDataTask * _Nonnull task, H5ApiModel *model) {
+        NSLog(@"url=========%@",model.url);
+
         /** 创建webView */
         [self setupWebView];
         //开启本地服务器

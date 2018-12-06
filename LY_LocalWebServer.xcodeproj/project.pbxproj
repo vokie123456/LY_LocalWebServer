@@ -59,6 +59,7 @@
 		215F417F21B9223A00A23E6B /* KeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 215F417D21B9223A00A23E6B /* KeyChainStore.m */; };
 		215F418521B92A7000A23E6B /* JoDes.m in Sources */ = {isa = PBXBuildFile; fileRef = 215F418121B92A7000A23E6B /* JoDes.m */; };
 		215F418621B92A7000A23E6B /* LYouMD5Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 215F418421B92A7000A23E6B /* LYouMD5Tool.m */; };
+		215F419621B94BC300A23E6B /* H5ApiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 215F419521B94BC300A23E6B /* H5ApiModel.m */; };
 		65A8241401DF239AD230C677 /* libPods-LY_LocalWebServer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C37ACE1DB392DB3D0E5A20B /* libPods-LY_LocalWebServer.a */; };
 /* End PBXBuildFile section */
 
@@ -164,6 +165,8 @@
 		215F418221B92A7000A23E6B /* LYouMD5Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYouMD5Tool.h; sourceTree = "<group>"; };
 		215F418321B92A7000A23E6B /* JoDes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoDes.h; sourceTree = "<group>"; };
 		215F418421B92A7000A23E6B /* LYouMD5Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYouMD5Tool.m; sourceTree = "<group>"; };
+		215F419421B94BC300A23E6B /* H5ApiModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = H5ApiModel.h; sourceTree = "<group>"; };
+		215F419521B94BC300A23E6B /* H5ApiModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = H5ApiModel.m; sourceTree = "<group>"; };
 		694EA49CFB4DF89F11DD531E /* Pods-LY_LocalWebServer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LY_LocalWebServer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LY_LocalWebServer/Pods-LY_LocalWebServer.debug.xcconfig"; sourceTree = "<group>"; };
 		E2EC867F1881E38CD85449FE /* Pods-LY_LocalWebServer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LY_LocalWebServer.release.xcconfig"; path = "Pods/Target Support Files/Pods-LY_LocalWebServer/Pods-LY_LocalWebServer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +216,7 @@
 		21364A5821B8F97200C7F405 /* LY_LocalWebServer */ = {
 			isa = PBXGroup;
 			children = (
+				215F419321B94BA700A23E6B /* Model */,
 				215F416321B915CF00A23E6B /* Config */,
 				215F414221B9117A00A23E6B /* Tool */,
 				215F413B21B9106B00A23E6B /* LYouRequest */,
@@ -450,6 +454,15 @@
 			path = LYouMD5Tool;
 			sourceTree = "<group>";
 		};
+		215F419321B94BA700A23E6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				215F419421B94BC300A23E6B /* H5ApiModel.h */,
+				215F419521B94BC300A23E6B /* H5ApiModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		433483FC10E441D052F70B1A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,7 +483,6 @@
 				21364A5221B8F97200C7F405 /* Sources */,
 				21364A5321B8F97200C7F405 /* Frameworks */,
 				21364A5421B8F97200C7F405 /* Resources */,
-				8B5705C14B6E82726F0248CE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -531,24 +543,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8B5705C14B6E82726F0248CE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LY_LocalWebServer/Pods-LY_LocalWebServer-resources.sh",
-				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LY_LocalWebServer/Pods-LY_LocalWebServer-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C57D542572161993057F7FA9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -605,6 +599,7 @@
 				215F418521B92A7000A23E6B /* JoDes.m in Sources */,
 				215F413821B90A5C00A23E6B /* DDFileLogger.m in Sources */,
 				215F412921B90A5C00A23E6B /* MultipartMessageHeaderField.m in Sources */,
+				215F419621B94BC300A23E6B /* H5ApiModel.m in Sources */,
 				215F417521B91E3B00A23E6B /* LYouLoadView.m in Sources */,
 				215F415621B911B000A23E6B /* UILabel+ContentSize.m in Sources */,
 				215F412A21B90A5C00A23E6B /* MultipartFormDataParser.m in Sources */,

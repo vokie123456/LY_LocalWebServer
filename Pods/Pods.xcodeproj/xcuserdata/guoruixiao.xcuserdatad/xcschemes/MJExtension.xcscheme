@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D796A478EE1B92EF4AE25BBDEC9314E8"
-               BlueprintName = "Pods-LY_LocalWebServer"
+               BlueprintIdentifier = "E99F35D46275D04DFD566593CECC7304"
+               BlueprintName = "MJExtension"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-LY_LocalWebServer.a">
+               BuildableName = "libMJExtension.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
