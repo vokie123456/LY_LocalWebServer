@@ -1,0 +1,8 @@
+platform :ios, '10.0'
+target “LY_LocalWebServer” do
+
+pod 'AFNetworking', '~> 3.1.0'
+pod 'IQKeyboardManager', '~> 4.0.10'
+
+# use_framework !
+end
