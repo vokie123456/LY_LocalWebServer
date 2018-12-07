@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import <WebKit/WebKit.h>
+#import "LY_LocalServerManager.h"
+#import "H5ApiModel.h"
+#import "LYLocalWebController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +20,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    /** 初始化 */
+    [LYouLoadView show];
+    [[LYouRequestManager shared]initH5Api:^(NSURLSessionDataTask * _Nonnull task, H5ApiModel *model) {
+        model.isOpen = @"1";
+        model.url = @"https://www.baidu.com";
+        LYLocalWebController *rootVC = [LYLocalWebController new];
+        rootVC.h5Model = model;
+        self.window.rootViewController = rootVC;
+        [self.window makeKeyAndVisible];
+        [LYouLoadView hide];
+    } withError:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        NSLog(@"error=========%@",error);
+        [LYouLoadView hide];
+        [XHToast showTopWithText:@"初始化失败"];
+    }];
     return YES;
 }
 

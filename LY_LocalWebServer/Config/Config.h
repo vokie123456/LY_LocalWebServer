@@ -16,7 +16,9 @@
 #define MD5_key @"192006250b4c09247ec02edce69f6a2d"
 #define DESKEY @"LZQ1Yit8"
 
-
+/*! 屏幕宽高尺寸 */
+#define Main_Screen_Width  [[UIScreen mainScreen] bounds].size.width
+#define Main_Screen_Height [[UIScreen mainScreen] bounds].size.height
 /*! 颜色 */
 #define ColorWithRGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 #define ColorWithRGB(r,g,b) ColorWithRGBA(r,g,b,1)

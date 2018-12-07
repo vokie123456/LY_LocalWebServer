@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		21364A5B21B8F97200C7F405 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21364A5A21B8F97200C7F405 /* AppDelegate.m */; };
-		21364A5E21B8F97200C7F405 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21364A5D21B8F97200C7F405 /* ViewController.m */; };
 		21364A6121B8F97200C7F405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21364A5F21B8F97200C7F405 /* Main.storyboard */; };
 		21364A6321B8F97300C7F405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21364A6221B8F97300C7F405 /* Assets.xcassets */; };
 		21364A6621B8F97300C7F405 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21364A6421B8F97300C7F405 /* LaunchScreen.storyboard */; };
@@ -60,6 +59,7 @@
 		215F418521B92A7000A23E6B /* JoDes.m in Sources */ = {isa = PBXBuildFile; fileRef = 215F418121B92A7000A23E6B /* JoDes.m */; };
 		215F418621B92A7000A23E6B /* LYouMD5Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 215F418421B92A7000A23E6B /* LYouMD5Tool.m */; };
 		215F419621B94BC300A23E6B /* H5ApiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 215F419521B94BC300A23E6B /* H5ApiModel.m */; };
+		21D5D1B721BA4FFA00FC620F /* LYLocalWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D5D1B621BA4FFA00FC620F /* LYLocalWebController.m */; };
 		65A8241401DF239AD230C677 /* libPods-LY_LocalWebServer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C37ACE1DB392DB3D0E5A20B /* libPods-LY_LocalWebServer.a */; };
 /* End PBXBuildFile section */
 
@@ -68,8 +68,6 @@
 		21364A5621B8F97200C7F405 /* LY_LocalWebServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LY_LocalWebServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21364A5921B8F97200C7F405 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		21364A5A21B8F97200C7F405 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		21364A5C21B8F97200C7F405 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		21364A5D21B8F97200C7F405 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		21364A6021B8F97200C7F405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21364A6221B8F97300C7F405 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21364A6521B8F97300C7F405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -167,6 +165,8 @@
 		215F418421B92A7000A23E6B /* LYouMD5Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYouMD5Tool.m; sourceTree = "<group>"; };
 		215F419421B94BC300A23E6B /* H5ApiModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = H5ApiModel.h; sourceTree = "<group>"; };
 		215F419521B94BC300A23E6B /* H5ApiModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = H5ApiModel.m; sourceTree = "<group>"; };
+		21D5D1B521BA4FFA00FC620F /* LYLocalWebController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYLocalWebController.h; sourceTree = "<group>"; };
+		21D5D1B621BA4FFA00FC620F /* LYLocalWebController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYLocalWebController.m; sourceTree = "<group>"; };
 		694EA49CFB4DF89F11DD531E /* Pods-LY_LocalWebServer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LY_LocalWebServer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LY_LocalWebServer/Pods-LY_LocalWebServer.debug.xcconfig"; sourceTree = "<group>"; };
 		E2EC867F1881E38CD85449FE /* Pods-LY_LocalWebServer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LY_LocalWebServer.release.xcconfig"; path = "Pods/Target Support Files/Pods-LY_LocalWebServer/Pods-LY_LocalWebServer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,8 +225,8 @@
 				21364A7621B902E600C7F405 /* Resource */,
 				21364A5921B8F97200C7F405 /* AppDelegate.h */,
 				21364A5A21B8F97200C7F405 /* AppDelegate.m */,
-				21364A5C21B8F97200C7F405 /* ViewController.h */,
-				21364A5D21B8F97200C7F405 /* ViewController.m */,
+				21D5D1B521BA4FFA00FC620F /* LYLocalWebController.h */,
+				21D5D1B621BA4FFA00FC620F /* LYLocalWebController.m */,
 				21364A5F21B8F97200C7F405 /* Main.storyboard */,
 				21364A6221B8F97300C7F405 /* Assets.xcassets */,
 				21364A6421B8F97300C7F405 /* LaunchScreen.storyboard */,
@@ -569,12 +569,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				215F413621B90A5C00A23E6B /* DDLog.m in Sources */,
-				21364A5E21B8F97200C7F405 /* ViewController.m in Sources */,
 				215F412521B90A5C00A23E6B /* HTTPRedirectResponse.m in Sources */,
 				215F412F21B90A5C00A23E6B /* DDRange.m in Sources */,
 				215F417821B91F0600A23E6B /* LYouRequestManager.m in Sources */,
 				215F413221B90A5C00A23E6B /* DDASLLogger.m in Sources */,
 				215F412021B90A5C00A23E6B /* HTTPErrorResponse.m in Sources */,
+				21D5D1B721BA4FFA00FC620F /* LYLocalWebController.m in Sources */,
 				21364A6921B8F97300C7F405 /* main.m in Sources */,
 				215F418621B92A7000A23E6B /* LYouMD5Tool.m in Sources */,
 				215F416F21B916E100A23E6B /* XHToast.m in Sources */,
