@@ -22,7 +22,7 @@
 
 - (void)initH5Api:(LYReturnValueBlock)successBlock withError:(LYErroeBlock)errorBlock{
     
-    NSDictionary *parametersDic = @{@"bundleId":@"C3000901",@"appVersion":[DeviceUUID getAppVersion],@"idfa":[DeviceUUID getIDFA],@"uuid":[DeviceUUID getUUID]};
+    NSDictionary *parametersDic = @{@"bundleId":@"31M08",@"appVersion":[DeviceUUID getAppVersion],@"idfa":[DeviceUUID getIDFA],@"uuid":[DeviceUUID getUUID]};
     
     [[LYouRequest sharedInstance]NetRequestPOSTWithRequestURL:@"" WithParameter:parametersDic WithReturnValeuBlock:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nonnull responseDict) {
 
@@ -30,6 +30,7 @@
         
         NSData *data =[jsonStr dataUsingEncoding:NSUTF8StringEncoding];
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        
         H5ApiModel *model = [H5ApiModel mj_objectWithKeyValues:dic];
         successBlock(task,model);
     } WithErrorBlock:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {

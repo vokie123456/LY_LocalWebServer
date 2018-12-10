@@ -1,0 +1,145 @@
+﻿[
+    {
+        "id": "1",
+        "name": "普攻",
+        "level": "1",
+        "des": "普通伤害",
+        "addAttack": "1.0",
+        "isBUFF": "0",
+        "BuffSum": "0",
+        "buffTarget": "1",
+        "time": "0"
+    },
+    {
+        "id": "2",
+        "name": "十字斩",
+        "level": "3",
+        "des": "对目标造成150%伤害",
+        "addAttack": "1.5",
+        "isBUFF": "0",
+        "BuffSum": "0",
+        "buffTarget": "1",
+        "time": "0"
+    },
+    {
+        "id": "3",
+        "name": "烈焰术",
+        "level": "9",
+        "des": "对目标造成130%伤害,附带燃烧状态,每秒掉本次攻击10%的血(持续2s)",
+        "addAttack": "1.3",
+        "isBUFF": "1",
+        "BuffSum": "0.1",
+        "buffTarget": "1",
+        "time": "2"
+    },
+    {
+        "id": "4",
+        "name": "星辰一击",
+        "level": "16",
+        "des": "对目标造成110%伤害,并降低目标30%攻击(持续3s)",
+        "addAttack": "1.1",
+        "isBUFF": "2",
+        "BuffSum": "0.3",
+        "buffTarget": "1",
+        "time": "3"
+    },
+    {
+        "id": "5",
+        "name": "眩晕一击",
+        "level": "24",
+        "des": "对目标造成120%伤害,并使目标眩晕(持续1s)",
+        "addAttack": "1.2",
+        "isBUFF": "3",
+        "BuffSum": "0",
+        "buffTarget": "1",
+        "time": "1"
+    },
+    {
+        "id": "7",
+        "name": "闪电术",
+        "level": "38",
+        "des": "对目标造成150%伤害,并降低目标30%防御(持续3s)",
+        "addAttack": "1.5",
+        "isBUFF": "4",
+        "BuffSum": "0.3",
+        "buffTarget": "1",
+        "time": "3"
+    },
+    {
+        "id": "8",
+        "name": "嗜血一击",
+        "level": "42",
+        "des": "对目标造成200%伤害,伤害的20%转化为自己的生命",
+        "addAttack": "2.0",
+        "isBUFF": "0",
+        "BuffSum": "0.2",
+        "buffTarget": "0",
+        "time": "3"
+    },
+    {
+        "id": "21",
+        "name": "狼牙斩",
+        "level": "52",
+        "des": "对目标造成240%伤害",
+        "addAttack": "2.4",
+        "isBUFF": "0",
+        "BuffSum": "0",
+        "buffTarget": "1",
+        "time": "0"
+    },
+    {
+        "id": "22",
+        "name": "破冰术",
+        "level": "58",
+        "des": "对目标造成220%伤害,并降低目标30%攻击(持续3s)",
+        "addAttack": "2.2",
+        "BuffSum": "0.3",
+        "isBUFF": "2",
+        "buffTarget": "1",
+        "time": "3"
+    },
+    {
+        "id": "24",
+        "name": "骷髅术",
+        "level": "0",
+        "des": "对目标造成240伤害",
+        "addAttack": "2.4",
+        "isBUFF": "0",
+        "BuffSum": "0",
+        "buffTarget": "1",
+        "time": "0"
+    },
+    {
+        "id": "25",
+        "name": "淬毒术",
+        "level": "0",
+        "des": "对目标造成220%伤害,并使目标持续掉10%血(持续3s)",
+        "addAttack": "2.2",
+        "BuffSum": "0.3",
+        "isBUFF": "5",
+        "buffTarget": "1",
+        "time": "3"
+    },
+    {
+        "id": "29",
+        "name": "高级烈焰术",
+        "level": "64",
+        "des": "对目标造成200%伤害,附带燃烧状态,每秒掉本次攻击10%的血(持续2s)",
+        "addAttack": "2.0",
+        "BuffSum": "0",
+        "isBUFF": "1",
+        "buffTarget": "1",
+        "time": "2"
+    },
+    {
+        "id": "28",
+        "name": "高级眩晕一击",
+        "level": "74",
+        "des": "对目标造成220%伤害,并使目标眩晕(持续2s)",
+        "addAttack": "2.2",
+        "BuffSum": "0",
+        "isBUFF": "3",
+        "buffTarget": "1",
+        "time": "2"
+    }
+]

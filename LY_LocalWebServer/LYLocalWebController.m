@@ -119,6 +119,29 @@
     [self noneScaleScript:webView];
 }
 
+//加载失败
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+}
+
+- (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
+    
+}
+
+//页面跳转
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    // 获取完整url并进行UTF-8转码
+    NSString *strRequest = [navigationAction.request.URL.absoluteString stringByRemovingPercentEncoding];
+    if ([strRequest hasPrefix:@"weixin://"]) {
+        decisionHandler(WKNavigationActionPolicyAllow);
+        /** 微信支付 */
+        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:strRequest] options:@{} completionHandler:^(BOOL success) {
+            
+        }];
+    }else{
+        decisionHandler(WKNavigationActionPolicyAllow);
+    }
+    NSLog(@"链接===========:%@",strRequest);
+}
 
 - (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential * _Nullable credential))completionHandler {
