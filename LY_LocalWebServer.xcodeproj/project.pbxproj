@@ -216,6 +216,7 @@
 		21364A5821B8F97200C7F405 /* LY_LocalWebServer */ = {
 			isa = PBXGroup;
 			children = (
+				21D5D1B821BA65CB00FC620F /* Vender */,
 				215F419321B94BA700A23E6B /* Model */,
 				215F416321B915CF00A23E6B /* Config */,
 				215F414221B9117A00A23E6B /* Tool */,
@@ -461,6 +462,13 @@
 				215F419521B94BC300A23E6B /* H5ApiModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		21D5D1B821BA65CB00FC620F /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vender;
 			sourceTree = "<group>";
 		};
 		433483FC10E441D052F70B1A /* Pods */ = {
@@ -756,11 +764,28 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35HG47YK45;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/UMSocialUI",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/UMSocialSDK",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/SocialLibraries/QQ/QQSDK",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/AliPaySDK",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LY_LocalWebServer/PrefixHeader.pch";
 				INFOPLIST_FILE = LY_LocalWebServer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/SocialLibraries/WeChat/WechatSDK",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/SocialLibraries/Sina/SinaSDK",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/UMSocialSDKPlugin",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LY-LocalWebServer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -775,11 +800,28 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35HG47YK45;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/UMSocialUI",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/UMSocialSDK",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/SocialLibraries/QQ/QQSDK",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/AliPaySDK",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LY_LocalWebServer/PrefixHeader.pch";
 				INFOPLIST_FILE = LY_LocalWebServer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/SocialLibraries/WeChat/WechatSDK",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/SocialLibraries/Sina/SinaSDK",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/LY_LocalWebServer/Vender/UMSocial/UMSocialSDKPlugin",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LY-LocalWebServer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
