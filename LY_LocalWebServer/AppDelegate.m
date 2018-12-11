@@ -23,7 +23,6 @@
     /** 初始化 */
     [LYouLoadView show];
     [[LYouRequestManager shared]initH5Api:^(NSURLSessionDataTask * _Nonnull task, H5ApiModel *model) {
-//        model.isOpen = @"0";
         LYLocalWebController *rootVC = [LYLocalWebController new];
         rootVC.h5Model = model;
         self.window.rootViewController = rootVC;

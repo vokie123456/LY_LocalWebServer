@@ -20,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self prefersStatusBarHidden];
+    [self performSelector:@selector(setNeedsStatusBarAppearanceUpdate)];
     self.view.backgroundColor = [UIColor whiteColor];
     /** 创建webView */
     [self setupWebView];
@@ -32,6 +34,11 @@
         /** 加载网络地址 */
         [self loadRemoteRequest];
     }
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;//隐藏为YES，显示为NO
 }
 
 /** 支持旋转 */
@@ -130,10 +137,17 @@
 //页面跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     // 获取完整url并进行UTF-8转码
-    NSString *strRequest = [navigationAction.request.URL.absoluteString stringByRemovingPercentEncoding];
+    NSString *strRequest = [NSString stringWithFormat:@"%@",navigationAction.request.URL.absoluteString];
+    
     if ([strRequest hasPrefix:@"weixin://"]) {
         decisionHandler(WKNavigationActionPolicyAllow);
         /** 微信支付 */
+        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:strRequest] options:@{} completionHandler:^(BOOL success) {
+            
+        }];
+    }else if([strRequest hasPrefix:@"http://pay2.pk2game.com"]){
+        decisionHandler(WKNavigationActionPolicyAllow);
+        /** 支付宝支付 */
         [[UIApplication sharedApplication]openURL:[NSURL URLWithString:strRequest] options:@{} completionHandler:^(BOOL success) {
             
         }];
